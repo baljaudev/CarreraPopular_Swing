@@ -61,12 +61,10 @@ public class ControlCorredores implements ActionListener {
 				if (datos.getColeccionCorredores().isEmpty()) {
 					pConsultar.mostrarError("No hay datos que mostrar", "Error");
 				} else {
-					 String sexo = pConsultar.controlSexo();
+					 String sexo = pConsultar.filtrarSexo();
 					 if (sexo.equals("Ambos")) {
 						 pConsultar.rellenarTabla(datos.getColeccionCorredores());
-					} else if (sexo.equals("Hombre")) {
-						pConsultar.rellenarTabla(datos.getCorredoresFiltro(sexo));
-					} else if (sexo.equals("Mujer")) {
+					} else {
 						pConsultar.rellenarTabla(datos.getCorredoresFiltro(sexo));
 					}
 					pConsultar.hacerTabVisi(true);

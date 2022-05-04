@@ -134,7 +134,7 @@ public class PConsultarCorredor extends JPanel {
 	}
 
 
-	public String controlSexo() {
+	public String filtrarSexo() {
 		String sexo = "";
 		
 		if (rdbtnAmbos.isSelected()) {
